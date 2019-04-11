@@ -1,0 +1,23 @@
+  /* breakpoint variables */
+$bp-small: 25;
+$bp-medium: 45;
+$bp-large: 55;
+$bp-xlarge: 65;
+
+$bp-em-small: $bp-small * 1em;
+$bp-em-medium: $bp-medium * 1em;
+$bp-em-large: $bp-large * 1em;
+$bp-em-xlarge: $bp-xlarge * 1em;
+
+/* Sizing vars */
+ /* initial px value for text */ 
+$rem-px: 16;
+
+ /* set px value sizes */
+$p-size-s-px: 16;
+$p-size-m-px: 18;
+$p-size-l-px: 20;
+ 
+$h1-size-s-px: 40;
+$h1-size-m-px: 56;
+$h1-size-l-px: 144;

@@ -1,0 +1,56 @@
+@supports (font-variation-settings: normal) {
+  h1 {
+    --text-opsz: #{$h1-size-s-px};
+    --text-wght: 575;
+    font-family: var(--font-stack-sans);
+    font-stretch: calc( var(--h1-wdth-min) * 1% );
+    @media screen and (min-width: $bp-em-small) {
+      line-height: calc(( var(--h1-lh-min) * 1em ) + ( var(--h1-lh-max) - var(--h1-lh-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-xlarge) - var(--bp-small) )));
+      font-size: calc(( var(--h1-size-min) * 1em ) + ( var(--h1-size-max) - var(--h1-size-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-xlarge) - var(--bp-small) )));
+    }
+    @media screen and (min-width: $bp-em-medium) {
+      --text-opsz: #{$h1-size-m-px};
+      font-stretch: calc( var(--h1-wdth-mid) * 1% );
+      font-weight: var(--h1-wght-mid);
+    }
+    @media screen and (min-width: $bp-em-large) {
+      font-weight: var(--h1-wght-max);
+    }
+    @media screen and (min-width: $bp-em-xlarge) {
+      --text-opsz: #{$h1-size-l-px};
+      font-size: calc( var(--h1-size-max) * 1em );
+      font-stretch: calc( var(--h1-wdth-max) * 1% );
+      line-height: var(--h1-lh-max);
+    }
+  }
+
+  p {
+    --text-opsz: #{$p-size-s-px};
+    --text-wdth: calc( var(--p-vf-wdth) * .9 );
+    font-size: calc( var(--p-size-min) * 1em );
+    font-stretch: calc( var(--p-wdth-min) * 1% );
+    font-weight: var(--text-wght);
+    font-variation-settings: 'opsz' var(--text-opsz);
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    line-height: var(--p-lh-min);
+    @media screen and (min-width: $bp-em-small) {
+      line-height: calc(( var(--p-lh-min) * 1em ) + ( var(--p-lh-max) - var(--p-lh-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-xlarge) - var(--bp-small) )));
+      font-size: calc(( var(--p-size-min) * 1em ) + ( var(--p-size-max) - var(--p-size-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-xlarge) - var(--bp-small) )));
+    }
+    @media screen and (min-width: $bp-em-medium) {
+      --text-opsz: #{$p-size-m-px};
+      font-stretch: calc( var(--p-wdth-mid) * 1% );
+    }
+    @media screen and (min-width: $bp-em-large) {
+      
+    }
+    @media (min-width: $bp-em-xlarge) {
+      --text-opsz: #{$p-size-l-px};
+      font-size: calc( var(--p-size-max) * 1em );
+      font-stretch: calc( var(--p-wdth-max) * 1% );
+      line-height: var(--p-lh-max);
+    }
+  }
+
+}
